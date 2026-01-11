@@ -1,0 +1,316 @@
+/* Google Font link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Global Style Start Here */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    background-color: #f8f4f4fd;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+/* Global Style Ends Here */
+
+/* Header Top Style Start Here */
+.header-top {
+    width: 100%;
+    padding: 15px 0px;
+    border-bottom: 1px solid #ececec;
+}
+
+.header-top p {
+    color: #a3a3a3;
+    display: inline-flex;
+}
+
+.header-top p span {
+    color: #44a649;
+    font-weight: 500;
+}
+
+.header-top .col-md-12 > a {
+    text-decoration: none;
+    padding: 0px 8px;
+    display: inline-flex;
+    color: #a3a3a3;
+    transition: 0.5s all ease-in-out;
+}
+
+.header-top .header-content-right {
+    width: 100%;
+    text-align: right;
+}
+
+.header-top .header-content-right span {
+    padding: 0px 15px;
+}
+
+.header-top .header-content-right > a {
+    text-decoration: none;
+    color: #a3a3a3;
+    transition: 0.5 all ease-in-out;
+}
+
+.header-top .header-content-right > a:hover {
+    color: #44a649;
+}
+
+.header-top .header-content-right > a i {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.header-top .header-social-media {
+    display: inline-flex;
+}
+
+.header-top .header-social-media ul li {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.header-top .header-social-media ul li a {
+    text-decoration: none;
+    padding: 0px 12px;
+    color: #a3a3a3;
+    transition: 0.5 all ease-in-out;
+}
+
+.header-top .header-social-media ul li:nth-last-child(4) a:hover {
+    color: #3b5998;
+}
+
+.header-top .header-social-media ul li:nth-last-child(3) a:hover {
+    color: #CD201F;
+}
+
+.header-top .header-social-media ul li:nth-last-child(2) a:hover {
+    color: #00acee;
+}
+
+.header-top .header-social-media ul li:nth-last-child(1) a:hover {
+    color: #0072b1;
+}
+
+.header-top .country-currency {
+    display: inline-flex;
+    margin: 0 auto;
+}
+
+.header-top .dropdown {
+    text-align: right;
+}
+
+.header-top .dropdown a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.5s all ease-in-out;
+    margin-left: 3px;
+}
+
+.header-top .dropdown img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.header-top .dropdown-menu {
+    --bs-dropdown-zindex: 1000;
+    --bs-dropdown-min-width: 7rem;
+    --bs-dropdown-padding-x: 0;
+    --bs-dropdown-padding-y: 0.5rem;
+    --bs-dropdown-spacer: 0.125rem;
+    --bs-dropdown-font-size: 1rem;
+    transform: translate(-17px, 30px) !important;
+}
+
+.header-top .dropdown-menu .dropdown-item:hover {
+    color: #ffffff;
+    background-color: #878787;
+    width: 94%;
+}
+
+/* Header Top Style Ends Here */
+
+/* Header Style Start Here */
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.header .navbar-brand img {
+    width: 100%;
+    max-width: 110px;
+}
+
+.header .user-account {
+    border-right: 1px solid #ececec;
+    margin: 0px 10px;
+    padding-right: 10px;
+}
+
+.header .navbar-search  {
+    margin: 0px 20px;
+}
+
+.header .user-account > a,
+.header .navbar-search > a { 
+    color: #222222;
+    transition: 0.5s all ease-in-out;
+    text-decoration: none;
+}
+
+.header .user-account > a:hover,
+.header .navbar-search > a:hover { 
+    color: #44a649;
+}
+
+.header .user-account > a i,
+.header .navbar-search > a i { 
+    margin-right: 5px;
+}
+
+.header .header-shoping-info a {
+    margin: 0px 15px;
+    color: #222222;
+    transition: 0.5s all ease-in-out;
+}
+
+.header .header-shoping-info a:hover {
+    color: #44a649;
+}
+
+/* Header Style Ends Here */
+
+
+/* Footer Style Start Here */
+
+.footer {
+    padding: 50px 0px 0px;
+    background-color: #252525;
+    display: inline-block;
+    width: 100%;
+    color: #ffffff;
+}
+
+.footer .input-group {
+    padding: 0px 175px 40px;
+}
+
+.footer .input-group input {
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    width: 100%;
+    max-width: 800px;
+    border: none;
+    background-color: #252525;
+    color: #ffffff;
+    border-bottom: 2px solid #16ba0a;
+}
+
+.footer .input-group input[type="text"]:focus {
+    border-color: #16ba0a; 
+    background-color: lightyellow;
+    outline: none;
+    transition: all ease-in-out 0.4s;
+    color: #000000;
+}
+
+.footer .input-group a {
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    background-color: #16ba0a;
+    color: #ffffff;
+    transition: all ease-in-out 0.4s;
+}
+
+.footer .input-group a:hover {
+    background-color: #ffffff;
+    color: #16ba0a;
+}
+
+.footer h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 0px 0px 0px 35px;
+    text-transform: uppercase;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    padding: 6px 20px;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #727272;
+    transition: all ease-in-out 0.4s;
+}
+
+.footer .footer_social_icon li {
+    display: inline-block;
+}
+
+.footer ul li a:hover {
+    color: #16ba0a;
+}
+
+.footer h5 {
+    padding: 12px 0px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+.footer h5 a {
+    text-decoration: none;
+    color: #16ba0a;
+}
+
+
+/* Footer Style Ends Here */

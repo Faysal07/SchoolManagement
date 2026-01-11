@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<!-- Notice Section Start Here -->
+<section class="noticeSection">
+    <div class="container">
+        <div class="col-md-12 col-sm-12">
+            <div class="searchFilter">
+                <form action="" method="get" class="search-form">
+                    <div class="search-box">
+                        <input type="text" name="search" placeholder="Search Notice Title or Catagory" class="search-input" id="" value="{{search_quary}}">
+                    </div>
+                </form>
+            </div>
+            <h2>Notice List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serial</th>
+                        <th>Notice Title</th>
+                        <th>Notice Catagory</th>
+                        <th>Notice Create Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for notice in notices %}
+                    <tr>
+                        <td>{{notice.noticeID}} </td>
+                        <td><a href="#">{{notice.noticeTitle}}</a></td>
+                        <td>{{notice.noticeCatagory.catagoryName}}</td>
+                        <td>{{notice.noticeCreate}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>    
+<!-- Notice Section Ends Here -->
+
+{% endblock %}

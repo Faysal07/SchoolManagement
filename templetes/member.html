@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<!-- Member Section Start Here -->
+
+<section class="members" style="padding: 50px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h2>All Members: {{members.count}}</h2>
+            </div>
+
+            {% for member in members %}
+
+            <div class="col-md-4 col-sm-4">
+                <div class="card" style="margin:20px 10px">
+                    <img src="{{member.memberImage.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{member.memberName}}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{ member.memberDesignation }}</li>
+                        <li class="list-group-item">{{ member.memberDepartment }}</li>
+                        <li class="list-group-item">{{ member.membermemberEmail }}</li>
+                        <li class="list-group-item">{{ member.memberPhone }}</li>
+                    </ul>
+                    <div class="card-footer">
+                        <small class="text-muted">Approved Member at: {{member.memberApprove}}</small>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Member Section Ends Here -->
+
+{% endblock %}
