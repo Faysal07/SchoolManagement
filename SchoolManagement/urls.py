@@ -25,7 +25,9 @@ from django.conf import settings
 
 # Link the File Form Views
 from notice.views import noticeLists
-from schoolmember.views import memberLists
+from schoolmember.views import MemberListsView
+
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
@@ -33,8 +35,10 @@ urlpatterns = [
     
     # Create my URLS Link Here
     path('notices/', noticeLists, name="noticeLists"),
-    path('members/', memberLists, name="memberLists"),
-    
+    # path('members/', MemberListsView, name="members"),
+    path('members/', MemberListsView.as_view(), name='members'),
+    # path('members/', TemplateView.as_view(template_name = "member.html"), name="members"),
+ 
 ]
 
 

@@ -8,7 +8,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
-                <h2>All Members: {{members.count}}</h2>
+                <h3 style="display: inline-block;">Filter Option:</h3>
+                <a href="{% url 'members' %}">ALL</a>
+                <a href="{% url 'members' %}?type=teacher">Teacher</a>
+                <a href="{% url 'members' %}?type=admin">Admin</a>
+                <a href="{% url 'members' %}?type=staff">Staff</a>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                <h2 class="text-center">All Members: {{members.count}}</h2>
             </div>
 
             {% for member in members %}
@@ -32,6 +40,19 @@
             </div>
 
             {% endfor %}
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    {% if page_obj.has_previous%}
+                    <li class="page-item"><a class="page-link" href="{% url 'members'%}?page={{page_obj.previous_page_number}}">Previous</a></li>
+                    {% endif %}
+
+                    {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link" href="{% url 'members'%}?page={{page_obj.next_page_number}}">Next</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+
         </div>
     </div>
 </section>
