@@ -16,7 +16,7 @@
             </div>
 
             <div class="col-md-12 col-sm-12">
-                <h2 class="text-center">All Members: {{members.count}}</h2>
+                <h2 class="text-center"> Members: {{members.count}}</h2>
             </div>
 
             {% for member in members %}
@@ -41,11 +41,16 @@
 
             {% endfor %}
 
+            <!-- Paginations Code Here -->
+
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    {% if page_obj.has_previous%}
+                    {% if page_obj.has_previous%}   
                     <li class="page-item"><a class="page-link" href="{% url 'members'%}?page={{page_obj.previous_page_number}}">Previous</a></li>
                     {% endif %}
+
+                    <!-- Showing Paginations -->
+                    <li class="page-link">Showing Page at: {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</li>
 
                     {% if page_obj.has_next %}
                     <li class="page-item"><a class="page-link" href="{% url 'members'%}?page={{page_obj.next_page_number}}">Next</a></li>
