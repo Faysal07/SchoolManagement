@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<section class="memberDetails">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            {% if member.memberImage %}
+                                <img src="{{ member.memberImage.url }}" class="img-fluid rounded-start" alt="...">
+                            {% else %}
+                                <div class="text-muted">No Photo</div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Member Name: </strong>{{ member.memberName }}</h5>
+                                <h5 class="card-title"><strong>Member Designation: </strong>{{ member.memberDesignation }}</h5>
+                                <h5 class="card-title"><strong>Member Type: </strong>{{ member.get_member_type_display }}</h5>
+                                <h5 class="card-title"><strong>Member Department: </strong>{{ member.memberDepartment }}</h5>
+                                <h5 class="card-title"><strong>Member Email: </strong>{{ member.memberEmail }}</h5>
+                                <h5 class="card-title"><strong>Member Phone: </strong>{{ member.memberPhone }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

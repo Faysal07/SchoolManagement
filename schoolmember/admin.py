@@ -4,7 +4,7 @@ from .models import SchoolMember
 
 # Register your models here.
 class SchoolMemberAdmin(admin.ModelAdmin):
-    list_display = ("memberName", "memberDesignation", "memberDepartment", "memberEmail", "memberPhone", "memberImage", "memberApprove",)
+    list_display = ("memberName", "memberDesignation", "member_type", "memberDepartment", "memberEmail", "memberPhone", "memberImage", "memberApprove",)
     list_filter = ("memberEmail", "memberDesignation", )
     search_fields = ("memberEmail", "memberDesignation", )
     

@@ -1,10 +1,12 @@
 from django.shortcuts import render
 
-from django.views.generic import ListView
-
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView
 from schoolmember.models import SchoolMember
 
 # Class Base View Here
+
+# Member View class Here
 class MemberListsView(ListView):
     template_name = "member.html"
     model = SchoolMember
@@ -22,6 +24,19 @@ class MemberListsView(ListView):
             filterQuerySet = filterQuerySet.filter(member_type = chooseMember)
         
         return filterQuerySet
+    
+# Member Details View Here
+class MemberDetailView(DetailView):
+    template_name = "memberdetails.html"
+    model = SchoolMember
+    context_object_name = 'member'
+    
+# Member Add View Here
+class MemberCreateView(CreateView):
+    template_name = "memberinput.html"
+    model = SchoolMember
+    fields = ["member_type", "memberName", "memberDesignation", "memberDepartment", "memberEmail", "memberPhone", "memberImage"]
+    success_url = reverse_lazy("members")
 
 
 # Function Base views here.
