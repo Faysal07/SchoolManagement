@@ -25,7 +25,7 @@ from django.conf import settings
 
 # Link the File Form Views
 from notice.views import noticeLists
-from schoolmember.views import MemberListsView, MemberDetailView, MemberCreateView
+from schoolmember.views import MemberListsView, MemberDetailView, MemberCreateView, MemberUpdateView, MemberDeleteView
 
 from django.views.generic import TemplateView
 
@@ -39,7 +39,9 @@ urlpatterns = [
     # Member Urls
     path('members/', MemberListsView.as_view(), name='members'),
     path('members/<int:pk>/', MemberDetailView.as_view(), name='memberdetails'),
-    path('members/create/', MemberCreateView.as_view(), name='memberinput')
+    path('members/create/', MemberCreateView.as_view(), name='memberinput'),
+    path('members/<int:pk>/update/', MemberUpdateView.as_view(), name="memberedit"),
+    path('members/<int:pk>/delete/', MemberDeleteView.as_view(), name="memberdelete")
  
 ]
 

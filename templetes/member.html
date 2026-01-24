@@ -39,6 +39,8 @@
                     </ul>
                     <div class="card-footer">
                         <a href="{% url 'memberdetails' member.pk %}" class="btn btn-outline-primary btn-sm">Detail</a>
+                        <a href="{% url 'memberedit' member.pk %}" class="btn btn-outline-primary btn-sm">Edit</a>
+                        <a href="{% url 'memberdelete' member.pk %}" class="btn btn-outline-danger btn-sm">Delete</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Approved Member at: {{member.memberApprove}}</small>

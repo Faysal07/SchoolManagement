@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from schoolmember.models import SchoolMember
 
 # Class Base View Here
@@ -36,6 +36,20 @@ class MemberCreateView(CreateView):
     template_name = "memberinput.html"
     model = SchoolMember
     fields = ["member_type", "memberName", "memberDesignation", "memberDepartment", "memberEmail", "memberPhone", "memberImage"]
+    success_url = reverse_lazy("members")
+    
+# Member Edit/ Update View Here
+class MemberUpdateView(UpdateView):
+    template_name = "memberinput.html"
+    model = SchoolMember
+    fields = ["member_type", "memberName", "memberDesignation", "memberDepartment", "memberEmail", "memberPhone", "memberImage"]
+    success_url = reverse_lazy("members")
+    
+# Member Delete View Here
+class MemberDeleteView(DeleteView):
+    template_name = "memberdelete.html"
+    model = SchoolMember
+    context_object_name = 'member'
     success_url = reverse_lazy("members")
 
 
